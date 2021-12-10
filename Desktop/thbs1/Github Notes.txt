@@ -1,0 +1,56 @@
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCjWiHBlNS7XJznxCXX6T5zLJhwbug46Led/k77PFy+8y1hntiJiyiHIcy+QpY2LOKal+D/QAwzA6sejn+xPc0yPgrZsehgW3JcT8kK+yaB2k+gkx9Rjj+0FWMjIKKFTwtXM1llTfUeNZ1rJEzR6+1ixTuqy1StU+aMaaD7LVlP1JfM08aOdG67W2NyOhEEwkf3NiTAAHQEBpQo2SCSb6EdlvwLN8KsfkANEENoLOSIScjFF03EbSepO/j+NYaUyfVTedY5FdwMXSfY6JIXcT+XQCOeaO47G5h/YTa2XG1squsbk8UFIHz7jkQQ804acjr/6wPaN9KrV1AhUkRFcWK+PQmJd+dSxsNqvT2026ur4w1VXtUuOOYfOlov0TOLq9q/pDeuCn6qNKPyepUqyjnkbzOS8wTorcbH4a/ysP5hwwb5wUURekIgASy319wtP5Gi5y8F01XSvmeDFkXFQAxKp7haMVx+s5vKj4Eo+fF/EbM45/pJNtxc84J02mVu3JijnZ/Vr6zJQkjxcfb1vaWxCkfdQ6LYFHT7FY6Ya0vmiG5WZ7XEjlPEx5dw5H7SnBwpm0d4WwN5LBWODw2e4Q3sHdpzToqd9EFgEfhskSufDBn9GnQU1MQZ8W24OoWMyldGDZgOhqOUFqTqczNPDJxIOIskgr6hYVdTUysaQHVdyQ== mdayaz3940@gmail.com
+
+
+
+
+======Github====================
+1=How to set up key====
+--------------------------
+
+
+md_ayaz@THBSSTRLPT-467 MINGW64 ~
+$ git init
+Initialized empty Git repository in C:/Users/md_ayaz/.git/
+
+md_ayaz@THBSSTRLPT-467 MINGW64 ~ (master)
+$ git config --global user.name "mdayaz3940"
+
+md_ayaz@THBSSTRLPT-467 MINGW64 ~ (master)
+$ git config --global user.email "mdayaz3940@gmail.com"
+
+md_ayaz@THBSSTRLPT-467 MINGW64 ~ (master)
+$ ssh-keygen -t rsa -b 4096 -C "mdayaz3940@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/md_ayaz/.ssh/id_rsa):
+Created directory '/c/Users/md_ayaz/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/md_ayaz/.ssh/id_rsa
+Your public key has been saved in /c/Users/md_ayaz/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:UEfrpJuFKfw2i7wDctHTLfog4HiG2+F8LiTxzrgX51Q mdayaz3940@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|        ..o      |
+|       . . .     |
+|     ... .o      |
+|. . ..E.o*.      |
+| * . oooS.o      |
+|+ X * oo +       |
+| & O o o*        |
+|o O o..o.o       |
+|.o +. +o.        |
++----[SHA256]-----+
+
+md_ayaz@THBSSTRLPT-467 MINGW64 ~ (master)
+$ eval "$(ssh-agent -s)"
+Agent pid 447
+
+md_ayaz@THBSSTRLPT-467 MINGW64 ~ (master)
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/md_ayaz/.ssh/id_rsa (mdayaz3940@gmail.com)
+
+md_ayaz@THBSSTRLPT-467 MINGW64 ~ (master)
+$ clip < ~/.ssh/id_rsa.pub
+
+md_ayaz@THBSSTRLPT-467 MINGW64 ~ (master)
